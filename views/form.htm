@@ -1,0 +1,15 @@
+<form class="loginform" ng-model="loginform" name="loginform" novalidate>
+  	<div class="form-element">
+        <label for="username">
+            <input type="text" ng-model="username" name="username" required/>	
+            <span class="error" ng-show="loginform.username.$error.required">username is required</span>
+        </label>
+	</div>
+	<div class="form-element">
+		<label for="password">
+			<input type="text" ng-model="password" name="password" required/>
+			<span class="error" ng-show="loginform.password.$error.required">passowrd is required</span>
+		</label> 
+	</div>
+	<button type="submit" ng-disabled="loginform.$invalid" ng-click="changelocation()">Find results</button>
+</form>

@@ -1,0 +1,7 @@
+<div class="searchvalues">
+  <input ng-model="searchvalues" type="text" />
+    <ul><li ng-repeat="planets in data | filter:searchvalues | limitTo:15" ng-if="username!='Luke Skywalker'" ng-class="{'bigger-font':max==planets.population}"><span class="indexhere">{{$index}}</span><span class="floatleft">{{planets.name}}</span><span class="floatright">{{planets.population}}</span></li>
+    <li ng-repeat="planets in data | filter:searchvalues" ng-if="username=='Luke Skywalker'" ng-class="{'bigger-font':max==planets.population}"><span class="indexhere">{{$index}}</span><span class="floatleft">{{planets.name}}</span><span class="floatright">{{planets.population}}</span></li><!-- for the advanced case-->
+    </ul>
+
+</div> 
